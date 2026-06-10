@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/image-explosion',
+  basePath: process.env.NODE_ENV === 'production' ? '/image-explosion' : '',
   output: 'export',
   images: { unoptimized: true },
 };
